@@ -1,5 +1,345 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: var(  --background);
+  background: var(--body-image) no-repeat center / cover;
+  background-attachment: fixed;
+  position: relative;
+  max-inline-size: 1024px;
+  margin: auto;
+ }
+
+.header {
+  display: grid;
+  grid-template-rows: 65px 255px 243px 205px;
+  position: relative;
+  margin-block-end: 60px;
+  height: 100vh;
 }
+
+.decorated-zone::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 20px;
+  bottom: 20px;
+  border-left: 1px solid  var(--color-text-border);
+  border-bottom: 1px solid var(--color-text-border);
+}
+
+.decorated-zone::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 20px;
+  top: 20px;
+  border-right: 1px solid var(--color-text-border);
+  border-top: 1px solid var(--color-text-border);
+}
+
+.header__theme-menu {
+  margin: auto;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  min-width: 70px;
+}
+
+.header__theme-menu-button {
+  width: 5.7vw;
+  text-transform: lowercase;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: var(--color-text-border);
+  height: 26px;
+  width: 100%;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var( --border-hover);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: solid 1px var( --header-button-border-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--color-text-border);
+}
+
+.headerFooter__title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 129.53px;
+  color: var(--header-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__text {
+  width: 48%;
+  justify-self: end;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  margin-inline-end: 19px;
+  color: var(--color-text-border);
+  padding-inline-end: 5px;
+}
+
+.title-decor {
+  background: var(--paragraph-background);
+}
+
+.container {
+  margin-block-end: 60px;
+}
+
+.section__content {
+  margin-inline: 20px;
+}
+
+.section__content:not(:last-child) {
+  margin-block-end: 80px;
+}
+
+.section__content__list {
+  display: grid;
+  gap: 20px;
+}
+
+.section__row-1 .section__content__list,
+.section__row-3 .section__content__list {
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+}
+
+.section__row-2 .section__content__list {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.title {
+  min-height: 23px;
+  font-weight: 700;
+  line-height: 23.4px;
+  color: var(--color-text-border);
+  font-size: 18px;
+}
+
+.section__row-3 h4 {
+  font-weight: 400;
+}
+
+.title:not(.title__special) {
+  margin-block-start: 20px;
+}
+
+.section__content__list__text {
+  line-height: 23.4px;
+  padding-block-start: 10px;
+}
+
+.section__row-2 h3 {
+  max-width: 30%;
+}
+
+.text-link {
+  text-shadow: 1px 1px 0 var(--paragraph-background);
+  border: solid 1px transparent;
+  cursor: pointer;
+}
+
+.text-link:hover {
+  border-block-end: solid 1px var( --color-text-border);
+}
+
+.text-link:focus-visible {
+  border: solid 1px var( --color-text-border);
+}
+
+.section__row-4 .section__content__list {
+  gap: 0;
+  max-height: 1048px;
+  margin-block-start: 20px;
+  grid-template-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-rows: 260px 20px 315px 25px 428px;
+  grid-template-areas:
+  "sunset sunset sunset . ice-cream"
+  ". . . . ice-cream"
+  "tape . books . ice-cream"
+  "tape . . . ."
+  "tape . street street street"
+}
+
+.section__content__list-item-sunset {
+  grid-area: sunset;
+}
+
+.section__content__list-item-ice-cream {
+  grid-area: ice-cream;
+}
+
+.section__content__list-item-tape {
+  grid-area: tape;
+}
+
+.section__content__list-item-books {
+  grid-area: books;
+}
+
+.section__content__list-item-street {
+  grid-area: street;
+}
+
+.section__content__picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+.footer__title {
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  
+  .header {
+    grid-template-rows: 448px 1px 273px 300px;
+  }
+ 
+  .header__theme-menu {
+    align-self: center;
+    justify-self: end;
+    margin: 0;
+  }
+
+ .header__theme-menu-list {
+   display: flex;
+   flex-direction: column;
+   margin-inline-end: 20px;
+   margin-block-start: 35px;
+ }
+
+ .section__row-2 .section__content__list {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto;
+    margin-block-start: 20px;
+ }
+
+ .section__row-2 .title {
+   margin-block-start: 0;
+ }
+
+ .section__row-4 .section__content__list {
+  max-height: 823px;
+  grid-template-rows: 192px 20px 230px 20px 318px;
+ }
+}
+
+@media (max-width: 602px) {
+
+  .header {
+    margin-inline: 10px;
+  }
+
+  .header__text {
+    width: 100%;
+    margin-inline-end: 0;
+  }
+
+  .section__row-2 h3 {
+    max-width: 100%;
+  } 
+
+  .section__row-1 .section__content__list, 
+  .section__row-3 .section__content__list {
+    grid-template-columns: auto;
+  }
+
+  .section__content:not(:last-child) {
+    margin-block-end: 50px;
+  }
+}
+
+@media (max-width: 495px) {
+
+  .decorated-zone::before {
+    right: 0;
+    top: 10px;
+  }
+
+  .decorated-zone::after {
+    left: 0;
+    bottom: 10px;
+  }
+
+  .header {
+    grid-template-rows: 212px 29px 244px 183px;
+    margin-block-end: 40px;
+  }
+
+  .header__theme-menu {
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    margin-inline-end: 5px;
+    margin-block-start: 74px;
+  }
+
+  .headerFooter__title {
+    line-height: 95.7px;
+  }
+
+  .section__content {
+    margin-inline: 10px;
+  }
+
+  .container {
+    margin-block-end: 40px;
+  }
+
+  .section__row-4 .section__content__list {
+    max-height: 1400px;
+    gap: 10px;
+    margin-block-start: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: 142px 355px 237px 355px 237px;
+    grid-template-areas:
+        "sunset"
+        "ice-cream"
+        "tape"
+        "books"
+        "street";
+  }
+
+  .footer {
+    margin-inline: 10px;
+  }
+}
+
+
+
+
+
+
