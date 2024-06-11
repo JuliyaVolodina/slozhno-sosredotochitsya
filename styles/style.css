@@ -306,7 +306,7 @@
   }
 
   .section__content {
-    margin-inline: 10px;
+    padding-inline: 10px;
   }
 
   .container {
