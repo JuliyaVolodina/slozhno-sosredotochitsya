@@ -41,7 +41,7 @@
 }
 
 .theme_dark .recording::after {
-  content: 'REG';
+  content: 'reg';
   display: block;
   position: absolute;
   width: 33px;
@@ -51,6 +51,7 @@
   text-align: center;
   color: var(--accent-color);
   line-height: 25px;
+  text-transform: uppercase;
 }
 
 .theme_dark .recording::before {
