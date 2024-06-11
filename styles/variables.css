@@ -1,6 +1,6 @@
 
 .page {
-  --background-: rgba(255, 241, 247, 1);
+  --background: rgba(255, 241, 247, 1);
   --body-image: url(../images/cover-image-light.png);
   --accent-color: rgba(255, 0, 112, 1);
   --font-color: rgba(53, 52, 48, 1);

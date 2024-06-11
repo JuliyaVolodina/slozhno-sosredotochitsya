@@ -1,5 +1,5 @@
 .page.theme_light {
-  --background-: rgba(255, 241, 247, 1);
+  --background: rgba(255, 241, 247, 1);
   --body-image: url(../images/cover-image-light.png);
   --accent-color: rgba(255, 0, 112, 1);
   --font-color: rgba(53, 52, 48, 1);
@@ -10,8 +10,9 @@
   --text-background: rgba(255, 141, 203, 1);
   --shadow-link: rgba(255, 141, 203, 1);
   color: var(--font-color);
-  background-color: var(  --background);
-  background: var(--body-image) no-repeat center / cover;
+  background-color: var(--background);
+  background-image: var(--body-image);
+  background-size: cover;
   background-attachment: fixed;
 }
 
