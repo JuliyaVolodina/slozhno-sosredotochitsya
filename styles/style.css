@@ -106,7 +106,7 @@
 }
 
 .section__content {
-  margin-inline: 20px;
+  padding-inline: 20px;
 }
 
 .section__content:not(:last-child) {
