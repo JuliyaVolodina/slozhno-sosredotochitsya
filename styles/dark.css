@@ -2,11 +2,13 @@
    --background: rgba(0, 0, 40, 1);
    --body-image: url(../images/cover-image-dark.png);
    --border-hover:rgba(255, 0, 112, 0.4);
-   --header-title-color: rgba(219, 0, 255, 1);
-   --color-text-border: rgba(0, 0, 40, 1);
-   --accent-color: rgba(255, 0, 112, 1);
-   --color-text-border: rgba(53, 52, 48, 1);
+   --header-footer-title-color: rgba(219, 0, 255, 1);
+   --font-color: rgba(0, 0, 40, 1);
    --main-text: rgba(241, 178, 206, 1);
+   --link-border: rgba(241, 178, 206, 1);
+   --accent-color: rgba(255, 0, 112, 1);
+   --shadow-link: rgba(255, 0, 112, 1);
+   color: var(--font-color);
 }
 
 .theme_dark .decorated-zone::after {
@@ -62,11 +64,7 @@
 }
 
 .theme_dark .headerFooter__title {
-  color: var(--header-title-color);
-}
-
-.theme_dark .header__text {
-    color: var(--color-text-border);
+  color: var(--header-footer-title-color);
 }
 
 .theme_dark .title-decor {
@@ -77,24 +75,20 @@
  color: var(--main-text);
 }
 
-.theme_dark h3.title {
+.theme_dark .title-accent {
   color: var(--accent-color);
  }
 
- .theme_dark h3.title-accent {
-   color: var(--color-text-border);
- }
-
  .theme_dark .text-link {
-  text-shadow: 1px 1px 0 var(--accent-color);
+  text-shadow: 1px 1px 0 var(--shadow-link);
 }
 
 .theme_dark .text-link:hover {
-  border-block-end: solid 1px var(--main-text );
+  border-block-end: solid 1px var(--link-border);
 }
 
 .theme_dark .text-link:focus-visible {
-  border: solid 1px var( --main-text);
+  border: solid 1px var(--link-border);
 }
 
 @media (max-width: 495px) {
@@ -118,11 +112,13 @@
     --background: rgba(0, 0, 40, 1);
     --body-image: url(../images/cover-image-dark.png);
     --border-hover:rgba(255, 0, 112, 0.4);
-    --header-title-color: rgba(219, 0, 255, 1);
-    --color-text-border: rgba(0, 0, 40, 1);
-    --accent-color: rgba(255, 0, 112, 1);
-    --color-text-border: rgba(53, 52, 48, 1);
+    --header-footer-title-color: rgba(219, 0, 255, 1);
+    --font-color: rgba(0, 0, 40, 1);
     --main-text: rgba(241, 178, 206, 1);
+    --link-border: rgba(241, 178, 206, 1);
+    --accent-color: rgba(255, 0, 112, 1);
+    --shadow-link: rgba(255, 0, 112, 1);
+    color: var(--font-color);
  }
  
  .decorated-zone::after {
@@ -130,7 +126,7 @@
    border-bottom: 1px solid var(--accent-color);
  }
  
-.decorated-zone::before {
+ .decorated-zone::before {
    border-right: 1px solid var(--accent-color);
    border-top: 1px solid var(--accent-color);
  }
@@ -139,11 +135,11 @@
    color: var(--accent-color);
  }
  
-.header__theme-menu-button:hover {
+ .header__theme-menu-button:hover {
    border-color: var( --border-hover);
  }
  
-.header__theme-menu-button:focus-visible {
+ .header__theme-menu-button:focus-visible {
    border-block-end: solid 1px var( --accent-color);
  }
  
@@ -151,41 +147,11 @@
    border: 1px solid var(--accent-color);
  }
  
- .recording::after {
-   content: 'REG';
-   display: block;
-   position: absolute;
-   width: 33px;
-   height: 26px;
-   top: 20px;
-   right: 48px;
-   text-align: center;
-   color: var(--accent-color);
-   line-height: 25px;
- }
- 
- .recording::before {
-   content: '';
-   display: block;
-   position: absolute;
-   background-color: var(--accent-color);
-   border-radius: 50%;
-   width: 9px;
-   height: 9px;
-   top: 28px;
-   right: 28px;
-   box-shadow: 0px 0px 4px 2px var(--accent-color);
- }
- 
  .headerFooter__title {
-   color: var(--header-title-color);
+   color: var(--header-footer-title-color);
  }
-
-.header__text {
-     color: var(--color-text-border);
- }
-
-.title-decor {
+ 
+ .title-decor {
    background: var(--accent-color);
  }
  
@@ -193,39 +159,19 @@
   color: var(--main-text);
  }
  
- .h3.title {
-   color: var(--accent-color);
-  }
- 
-  h3.title-accent {
-    color: var(--color-text-border);
+ .title-accent {
+  color: var(--accent-color);
   }
  
  .text-link {
-   text-shadow: 1px 1px 0 var(--accent-color);
+   text-shadow: 1px 1px 0 var(--shadow-link);
  }
  
-.text-link:hover {
-   border-block-end: solid 1px var(--main-text );
+ .text-link:hover {
+   border-block-end: solid 1px var(--link-border);
  }
  
-.text-link:focus-visible {
-   border: solid 1px var( --main-text);
- }
- 
- @media (max-width: 495px) {
-
-  .recording::before {
-     width: 11px;
-     height: 11px;
-     top: 17px;
-     right: 8px;
-   }
- 
- .recording::after {
-     top: 11px;
-     right: 30px;
-   }
- }
- 
+ .text-link:focus-visible {
+   border: solid 1px var(--link-border);
+ } 
 }

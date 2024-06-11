@@ -2,14 +2,15 @@
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 23.4px;
+  color: var(--font-color);
   background-color: var(  --background);
   background: var(--body-image) no-repeat center / cover;
   background-attachment: fixed;
   position: relative;
   max-inline-size: 1024px;
   margin: auto;
- }
+}
 
 .header {
   display: grid;
@@ -27,8 +28,8 @@
   height: 25px;
   left: 20px;
   bottom: 20px;
-  border-left: 1px solid  var(--color-text-border);
-  border-bottom: 1px solid var(--color-text-border);
+  border-inline-start: 1px solid  var(--font-color);
+  border-block-end: 1px solid var(--font-color);
 }
 
 .decorated-zone::before {
@@ -39,8 +40,8 @@
   height: 25px;
   right: 20px;
   top: 20px;
-  border-right: 1px solid var(--color-text-border);
-  border-top: 1px solid var(--color-text-border);
+  border-inline-end: 1px solid var(--font-color);
+  border-block-start: 1px solid var(--font-color);
 }
 
 .header__theme-menu {
@@ -49,7 +50,6 @@
 
 .header__theme-menu-list {
   display: flex;
-  justify-content: center;
   gap: 10px;
 }
 
@@ -58,34 +58,34 @@
 }
 
 .header__theme-menu-button {
-  width: 5.7vw;
   text-transform: lowercase;
   background-color: transparent;
   border: 1px solid transparent;
-  color: var(--color-text-border);
   height: 26px;
   width: 100%;
+  line-height: 18px;
+  color: var(--font-color);
 }
 
 .header__theme-menu-button:hover {
-  border-color: var( --border-hover);
+  border-color: var(--border-hover);
   cursor: pointer;
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: solid 1px var( --header-button-border-color);
+  border-block-end: solid 1px var(--border-focus);
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--color-text-border);
+  border: 1px solid var(--border-active-element);
 }
 
 .headerFooter__title {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   line-height: 129.53px;
-  color: var(--header-title-color);
+  color: var(--header-footer-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -93,15 +93,12 @@
   width: 48%;
   justify-self: end;
   font-weight: 700;
-  line-height: 23.4px;
   text-align: left;
   margin-inline-end: 19px;
-  color: var(--color-text-border);
-  padding-inline-end: 5px;
 }
 
 .title-decor {
-  background: var(--paragraph-background);
+  background: var(--text-background);
 }
 
 .container {
@@ -135,8 +132,6 @@
 .title {
   min-height: 23px;
   font-weight: 700;
-  line-height: 23.4px;
-  color: var(--color-text-border);
   font-size: 18px;
 }
 
@@ -149,7 +144,6 @@
 }
 
 .section__content__list__text {
-  line-height: 23.4px;
   padding-block-start: 10px;
 }
 
@@ -158,17 +152,17 @@
 }
 
 .text-link {
-  text-shadow: 1px 1px 0 var(--paragraph-background);
+  text-shadow: 1px 1px 0 var(--shadow-link);
   border: solid 1px transparent;
   cursor: pointer;
 }
 
 .text-link:hover {
-  border-block-end: solid 1px var( --color-text-border);
+  border-block-end: solid 1px var(--border-active-element);
 }
 
 .text-link:focus-visible {
-  border: solid 1px var( --color-text-border);
+  border: solid 1px var( --border-active-element);
 }
 
 .section__row-4 .section__content__list {

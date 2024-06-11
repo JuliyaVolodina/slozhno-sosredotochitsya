@@ -1,75 +1,73 @@
 .page.theme_light {
-   --background: rgba(255, 241, 247, 1);
-   --body-image: url(../images/cover-image-light.png);
-   --accent-color: rgba(255, 0, 112, 1);
-   --color-text-border: rgba(53, 52, 48, 1);
-   --header-button-border-color: rgba(0, 14, 46, 1);
-   --header-title-color: rgba(255, 194, 230, 1);
-   --paragraph-background: rgba(255, 141, 203, 1);
-   --border-hover: rgba(50, 49, 45, 0.4);
-   --main-text: rgba(241, 178, 206, 1);
-   background-color: var(  --background);
-   background: var(--body-image) no-repeat center / cover;
-   background-attachment: fixed;
- }
+  --background-: rgba(255, 241, 247, 1);
+  --body-image: url(../images/cover-image-light.png);
+  --accent-color: rgba(255, 0, 112, 1);
+  --font-color: rgba(53, 52, 48, 1);
+  --border-active-element: rgba(53, 52, 48, 1);
+  --header-footer-title-color: rgba(255, 194, 230, 1);
+  --border-focus: rgba(0, 14, 46, 1);
+  --border-hover: rgba(50, 49, 45, 0.4);
+  --text-background: rgba(255, 141, 203, 1);
+  --shadow-link: rgba(255, 141, 203, 1);
+  color: var(--font-color);
+  background-color: var(  --background);
+  background: var(--body-image) no-repeat center / cover;
+  background-attachment: fixed;
+}
 
  .theme_light .decorated-zone::after {
-  border-left: 1px solid  var(--color-text-border);
-  border-bottom: 1px solid var(--color-text-border);
+  border-left: 1px solid  var(--font-color);
+  border-bottom: 1px solid var(--font-color);
 }
 
 .theme_light .decorated-zone::before {
-  border-right: 1px solid var(--color-text-border);
-  border-top: 1px solid var(--color-text-border);
+  border-right: 1px solid var(--font-color);
+  border-top: 1px solid var(--font-color);
 }
 
 .theme_light .header__theme-menu-button {
-  color: var(--color-text-border);
+  color: var(--font-color);
 }
 
 .theme_light .header__theme-menu-button:hover {
-  border-color: var( --border-hover);
+  border-color: var(--border-hover);
 }
 
 .theme_light .header__theme-menu-button:focus-visible {
-  border-block-end: solid 1px var( --header-button-border-color);
+  border-block-end: solid 1px var(--border-focus);
 }
 
 .theme_light .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--color-text-border);
+  border: 1px solid var(--border-active-element);
 }
 
 .theme_light .header__title {
-  color: var(--header-title-color);
+  color: var(--header-footer-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-.theme_light .header__text {
-  color: var(--color-text-border);
-}
-
 .theme_light .title-decor {
-  background: var(--paragraph-background);
+  background: var(--text-background);
 }
 
 .theme_light .title {
-  color: var(--color-text-border);
+  color: var(--font-color);
 }
 
 .theme_light .section__content__list__text {
-  color: var(--color-text-border);
- }
+  color: var(--font-color);
+}
 
 .theme_light .text-link {
-  text-shadow: 1px 1px 0 var(--paragraph-background);
+  text-shadow: 1px 1px 0 var(--shadow-link);
 }
 
 .theme_light .text-link:hover {
-  border-block-end: solid 1px var( --color-text-border);
+  border-block-end: solid 1px var(--border-active-element);
 }
 
 .theme_light .text-link:focus-visible {
-  border: solid 1px var( --color-text-border);
+  border: solid 1px var(--border-active-element);
 }
 

@@ -3,11 +3,14 @@
   --background-: rgba(255, 241, 247, 1);
   --body-image: url(../images/cover-image-light.png);
   --accent-color: rgba(255, 0, 112, 1);
-  --color-text-border: rgba(53, 52, 48, 1);
-  --header-button-border-color: rgba(0, 14, 46, 1);
-  --header-title-color: rgba(255, 194, 230, 1);
-  --paragraph-background: rgba(255, 141, 203, 1);
+  --font-color: rgba(53, 52, 48, 1);
+  --border-active-element: rgba(53, 52, 48, 1);
+  --header-footer-title-color: rgba(255, 194, 230, 1);
+  --border-focus: rgba(0, 14, 46, 1);
   --border-hover: rgba(50, 49, 45, 0.4);
+  --text-background: rgba(255, 141, 203, 1);
+  --shadow-link: rgba(255, 141, 203, 1);
   --main-text: rgba(241, 178, 206, 1);
+  --link-border: rgba(241, 178, 206, 1);  
 }
 
